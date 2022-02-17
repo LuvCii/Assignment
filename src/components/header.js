@@ -30,7 +30,7 @@ const Header = {
                 </div>
                     
                 </div>
-                 <button  class="flex"><img class="transition ease-in-out delay-350 rounded-full hover:bg-slate-400 ml-[-10px] w-12 " src="../../images/cart.png" alt="cart"></button>
+                 <a href="/cart" class="flex"><img class="transition ease-in-out delay-350 rounded-full hover:bg-slate-400 ml-[-10px] w-12 " src="../../images/cart.png" alt="cart"></a>
                 <button  class="flex" id="logout"><img class="transition ease-in-out delay-350 hover:translate-x-2 ml-4 w-10 " src="../../images/logout.png" alt="signout"></button>
            
             `: `<a href="/signin" class="flex">

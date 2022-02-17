@@ -1,6 +1,8 @@
+import { reRender } from "../../utils";
+import { getAll } from "../../api/user";
 const AdminDashboard = {
-    render() {
-        return /* html */ `
+        render() {
+            return /* html */ `
 
         <div>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -67,7 +69,10 @@ const AdminDashboard = {
                     <div x-data="{ notificationOpen: false }" class="relative">
                         <button @click="notificationOpen = ! notificationOpen"
                             class="flex mx-4 text-gray-600 focus:outline-none">
-                            <span>abc@gmail.com</span>
+                             ${localStorage.getItem('user') ? `
+                             <span class="font-bold text-gray-900 ">Welcome back: </span>
+                                <p class=" font-bold italic text-blue-800" id="accountInfo">Username</p>
+                            `: ""}
                         </button>
     
                         <div x-show="notificationOpen" @click="notificationOpen = false"
@@ -186,6 +191,12 @@ const AdminDashboard = {
     </div>
 </div>
             `;
+    },
+    afterRender() {
+        // lấy thông tin username từ localStorage và hiển thị ra ngoài
+        const username = JSON.parse(localStorage.getItem("user")).username;
+        document.querySelector('#accountInfo').innerHTML = username;
     }
+    
 }
 export default AdminDashboard;

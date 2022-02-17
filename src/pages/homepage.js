@@ -1,5 +1,4 @@
 import Banner from "../components/banner";
-import News from "../components/news";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
@@ -13,9 +12,6 @@ const HomePage = {
         <main>
             <div class="banner">
                 ${Banner.render()}
-            </div>
-            <div class="news">
-                ${await News.render()}
             </div>
         </main>
         <footer>
