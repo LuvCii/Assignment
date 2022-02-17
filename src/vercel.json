@@ -6,6 +6,18 @@
         {
             "src": "/products",
             "dest": "/"
+        },
+        {
+            "src": "/news",
+            "dest": "/"
+        },
+        {
+            "src": "/heroes",
+            "dest": "/"
+        },
+        {
+            "src": "/contacts",
+            "dest": "/"
         }
     ]
 }
