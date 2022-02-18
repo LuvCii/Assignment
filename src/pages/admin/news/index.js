@@ -1,9 +1,11 @@
 import NavAdmin from "../../../components/navadmin";
 import { reRender } from "../../../utils";
-// import news from "../../../data";
-import { getAll, remove } from "../../../api/post";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
+import { getAll, remove } from "../../../api/product";
 
-const AdminNews = {
+
+const AdminProducts = {
         async render() {
             const { data } = await getAll();
             return /* html */ `
@@ -17,7 +19,7 @@ const AdminNews = {
                     <h2
                     class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate"
                     >
-                    Quản lý tin tức
+                    Quản lý sản phẩm
                     </h2>
                 </div>
                 <div class="mt-5 flex lg:mt-0 lg:ml-4">
@@ -34,23 +36,29 @@ const AdminNews = {
             </header>
             <main>
                 <div class="mx-40 mt-10 flex flex-col mx-12">
-                ${data.map((post, index) => /* html */`
+                ${data.map((pro, index) => /* html */`
                     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                         <div class=" py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                         <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                             <table class="min-w-full divide-y divide-gray-200">
                             <thead class="bg-gray-50">
                                 <tr>
-                                    <th scope="col" class="w-12 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    <th scope="col" class="w-12 px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
                                         Stt
                                     </th>
-                                    <th scope="col" class="w-[500px] px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                       
+                                    <th scope="col" class="w-[500px] px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
+                                       Image
                                     </th>
-                                    <th scope="col" class="w-3/4 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                        Title
+                                     <th scope="col" class="w-1/4 px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
+                                        Name
                                     </th>
-                                    <th scope="col" class=" px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    <th scope="col" class="w-1/4 px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
+                                        Type
+                                    </th>
+                                    <th scope="col" class="w-3/4 px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
+                                        Descepticon
+                                    </th>
+                                    <th scope="col" class=" px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
                                         Active
                                     </th>
                                 </tr>
@@ -62,20 +70,26 @@ const AdminNews = {
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <div class=" flex-shrink-0 h-10 w-10">
-                                            <img class="" src="../../../../images/wrapp.png" alt="">
+                                        <div class="  flex-shrink-0 h-44 w-40">
+                                            <img class="pb-9 w-72 h-44 object-cover rounded-xl shadow-2xl" src="${pro.img}" alt="" >
                                         </div>
                                     </div>
                                 </td>
+                                <td class="px-6 py-4  whitespace-nowrap  text-sm font-medium">
+                                    <span>${pro.name}</span>
+                                </td>
+                                 <td class="px-6 py-4  whitespace-nowrap  text-sm font-medium">
+                                    <span>${pro.type}</span>
+                                </td>
                                 <td class=" px-6 py-4 ">
-                                    <div class= "text-sm text-gray-900"> <a href="">${post.desc}</a></div>
+                                    <span class="whitespace-nowrap text-sm font-medium">${pro.desc}</span>
                                 </td>
                                
                                 <td class="px-6 py-4  whitespace-nowrap  text-sm font-medium">
-                                    <a href="/admin/news/${post.id}/edit" class="text-indigo-600 hover:text-red-600">Edit</a>
+                                    <a href="/admin/news/${pro.id}/edit" class="text-indigo-600 hover:text-red-600">Edit</a>
                                 </td>
                                  <td class="px-6 py-4  whitespace-nowrap text-right text-sm font-medium">
-                                    <button data-id="${post.id}" class="btn btn-remove text-indigo-600 hover:text-red-600"> <div class=" flex-shrink-0 h-10 w-10">
+                                    <button data-id="${pro.id}" class="btn btn-remove text-indigo-600 hover:text-red-600"> <div class=" flex-shrink-0 h-10 w-10">
                                             <img class="transition ease-in-out delay-350 hover:-translate-y-1 hover:scale-110 hover: duration-300" src="../../../../images/delete.png" alt="">
                                         </div></button> 
                                 </td>
@@ -105,12 +119,12 @@ const AdminNews = {
                 if(confirm){
                      // gọi hàm delete trong folder API và bắn id vào hàm
                     remove(id).then(() => {
-                        console.log('Da xoa thanh cong');
-                        reRender(AdminNews, "#app");
+                        toastr.success("Đã xóa sản phẩm thành công");
+                        reRender(AdminProducts, "#app");
                     })
                 }
             })
         });
     }
 }
-export default AdminNews;
+export default AdminProducts;
