@@ -153,7 +153,7 @@ const AdminDashboard = {
                             </div>
     
                             <div class="transition ease-in-out delay-350 hover:-translate-y-1 hover:scale-110 hover: duration-300 w-full mt-6 px-6 sm:w-1/2 xl:w-1/3 xl:mt-0">
-                                 <a href="/"><div class="transition ease-in-out hover:bg-slate-100 mt-16 flex items-center px-5 py-10 shadow-sm rounded-md bg-white">
+                                 <a href="/admin/products"><div class="transition ease-in-out hover:bg-slate-100 mt-16 flex items-center px-5 py-10 shadow-sm rounded-md bg-white">
                                     <div class="p-3 rounded-full bg-slate-800 bg-opacity-75">
                                         <img class="w-16"src=".././../../images/superhero.png"alt="Your avatar">
                                     </div>

@@ -8,6 +8,7 @@ import Contact from "./pages/contact";
 import signIn from "./pages/signin";
 import signUp from "./pages/signup";
 import CartPage from "./pages/cart";
+import AdminProducts from "./pages/admin/products";
 import AdminNews from "./pages/admin/news";
 import AdminNewsAdd from "./pages/admin/news/add";
 import AdminNewsEdit from "./pages/admin/news/edit";
@@ -58,15 +59,16 @@ router.on({
     "/contact": () => print(Contact),
     "/signin": () => print(signIn),
     "/signup": () => print(signUp),
+    "/admin": () => print(AdminDashboard),
+    "/admin/products": () => print(AdminProducts),
+    // "/admin/dashboard": () => console.log("admin product"),
+    "/admin/news": () => print(AdminNews),
+    "/admin/news/add": () => print(AdminNewsAdd),
     "/admin/news/:id/edit": ({ data }) => {
         // console.log(data);
         const { id } = data;
         print(AdminNewsEdit.render(id));
     },
-    "/admin": () => print(AdminDashboard),
-    // "/admin/dashboard": () => console.log("admin product"),
-    "/admin/news": () => print(AdminNews),
-    "/admin/news/add": () => print(AdminNewsAdd),
     "/admin/users": () => print(AdminUser)
 
 

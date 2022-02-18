@@ -41,17 +41,6 @@ const NavAdmin = {
                 <span class="text-slate-200 ml-3 mt-[5px]">Minhdung</span>
               </div>
 
-              <!--
-                Dropdown menu, show/hide based on menu state.
-
-                Entering: "transition ease-out duration-100"
-                  From: "transform opacity-0 scale-95"
-                  To: "transform opacity-100 scale-100"
-                Leaving: "transition ease-in duration-75"
-                  From: "transform opacity-100 scale-100"
-                  To: "transform opacity-0 scale-95"
-              -->
-             
             </div>
           </div>
         </div>
@@ -99,10 +88,6 @@ const NavAdmin = {
           <div class="flex-shrink-0">
             <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
           </div>
-          <div class="ml-3">
-            <div class="text-base font-medium leading-none text-white">Tom Cook</div>
-            <div class="text-sm font-medium leading-none text-gray-400">tom@example.com</div>
-          </div>
           <button type="button" class="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
             <span class="sr-only">View notifications</span>
             <!-- Heroicon name: outline/bell -->
@@ -122,13 +107,6 @@ const NavAdmin = {
     </div>
   </nav>
 
-  <header class="bg-white shadow">
-    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold text-gray-900">
-        Dashboard
-      </h1>
-    </div>
-  </header>
   
 </div>
         `

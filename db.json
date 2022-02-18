@@ -68,14 +68,6 @@
       "price": "13.888"
     },
     {
-      "name": "Triệu vân",
-      "img": "https://lienquan.garena.vn/files/skin/d7342b00ec05faf09f815c74ce8306eb59d1ad95a449a.jpg",
-      "type": "Đấu sĩ",
-      "desc": "Chú thích người dùng",
-      "id": "5",
-      "price": "13.888"
-    },
-    {
       "name": "Zip",
       "img": "https://lienquan.garena.vn/files/skin/b85f496bf0380fd9bdf490a1dd74ea0e5d3826133a4ea.jpg",
       "type": "Trợ thủ",
@@ -90,14 +82,6 @@
       "desc": "Chú thích người dùng",
       "id": "7",
       "price": "25.888"
-    },
-    {
-      "name": "Murad",
-      "img": "https://lienquan.garena.vn/files/skin/5e775f1787d59bc3ee6adc4316c05ecf5a698f791b57f.jpg",
-      "type": "Sát thủ",
-      "desc": "Chú thích người dùng",
-      "id": "8",
-      "price": "18.888"
     },
     {
       "name": "Liliana",
