@@ -1,6 +1,8 @@
+import { reRender } from "../utils";
+import { getAll } from "../api/user";
 const NavAdmin = {
-    render() {
-        return /* html */ `
+        render() {
+            return /* html */ `
         <div class="min-h-full">
   <nav class="bg-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,7 +40,9 @@ const NavAdmin = {
                   <span class="sr-only">Open user menu</span>
                   <img class="bg-slate-50 h-9 w-9 rounded-full" src="../../images/hacker.png" alt="">
                 </button>
-                <span class="text-slate-200 ml-3 mt-[5px]">Minhdung</span>
+                 ${localStorage.getItem('user') ? `
+                              <span id="accountInfo" class="font-bold italic text-slate-200 ml-3 mt-[5px]">Username</span>
+                            `: ""}
               </div>
 
             </div>
@@ -110,6 +114,11 @@ const NavAdmin = {
   
 </div>
         `
+    },
+     afterRender() {
+        // lấy thông tin username từ localStorage và hiển thị ra ngoài
+        const username = JSON.parse(localStorage.getItem("user")).username;
+        document.querySelector('#accountInfo').innerHTML = username;
     }
 };
 export default NavAdmin;

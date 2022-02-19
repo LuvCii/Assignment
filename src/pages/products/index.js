@@ -6,7 +6,7 @@ const Products = {
             const { data } = await getAll();
             return /* html */ `
         <div class="max-w-full mx-auto">
-        <header>
+        <header id="header">
             ${Header.render()}
         </header>
         <main class="my-6">
@@ -90,6 +90,9 @@ const Products = {
         </footer>
     </div>
         `;
+    },
+     afterRender() {
+        Header.afterRender();
     },
 };
 

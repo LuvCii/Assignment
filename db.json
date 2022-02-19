@@ -1,103 +1,104 @@
 {
-  "posts": [
-    {
-      "title": "5 KINH NGHIỆM ĐI RỪNG HỮU ÍCH TRONG LIÊN QUÂN MOBILE",
-      "img": "https://lienquan.garena.vn/files/skin/5159a548e4a7ef3a7b082059fd3a2a2a5ac73e186c7d5.jpg",
-      "descMini": "Kinh nghiệm đi rừng hữu ích trong Liên Quân Mobile",
-      "desc": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "id": "7"
-    }
-  ],
-  "users": [
-    {
-      "email": "abc@gmail.com",
-      "password": "$2a$10$657p9bD7APhYBrzN7MjlC.i11WoORlRosFSdetkadxPLBABD/Dfjm",
-      "username": "Minh Dung",
-      "id": 1
-    },
-    {
-      "email": "thaopt@gmail.com",
-      "password": "$2a$10$atg589JfxV5XqSN7jTsh8.qj59GEP0G7jQPq1sP6kft3VULVlgEyK",
-      "username": "thao",
-      "id": 8
-    },
-    {
-      "email": "dung@gmail.com",
-      "password": "$2a$10$JkI5nG9oacAkY5AlKX0o7OMCSSc9yODEiEyxlKVnssJmn.4U9KBO2",
-      "username": "Minhdung",
-      "id": 10
-    },
-    {
-      "email": "dungtmph16743@fpt.edu.vn",
-      "password": "$2a$10$h/GVKOT5ttNWxZY6kfwcM.6IpTIRPawVrD6/JhBlb2SD4uHExh9Qy",
-      "username": "Pholotino",
-      "id": 11
-    }
-  ],
-  "products": [
-    {
-      "name": "Nakroth",
-      "img": "https://lienquan.garena.vn/files/skin/c2f3364ac1c81a67cc39e031b05d21ef5c41d1a401795.jpg",
-      "type": "Sát thủ",
-      "desc": "Chú thích người dùng",
-      "id": "1",
-      "price": "18.888"
-    },
-    {
-      "name": "Tulen",
-      "img": "https://lienquan.garena.vn/files/skin/5159a548e4a7ef3a7b082059fd3a2a2a5ac73e186c7d5.jpg",
-      "type": "Pháp sư",
-      "desc": "Chú thích người dùng",
-      "id": "2",
-      "price": "18.888"
-    },
-    {
-      "name": "Violet",
-      "img": "https://lienquan.garena.vn/files/skin/d8b09710ebceb2d01dd1f79a79ae0a92590c02a01a161.jpg",
-      "type": "Xạ thủ",
-      "desc": "Chú thích người dùng",
-      "id": "3",
-      "price": "18.888"
-    },
-    {
-      "name": "Toro",
-      "img": "https://lienquan.garena.vn/files/skin/134e0d0f72e41584ba3e263ab5128ef7583ffb23e6e58.jpg",
-      "type": "Đỡ đòn",
-      "desc": "Chú thích người dùng",
-      "id": "4",
-      "price": "13.888"
-    },
-    {
-      "name": "Zip",
-      "img": "https://lienquan.garena.vn/files/skin/b85f496bf0380fd9bdf490a1dd74ea0e5d3826133a4ea.jpg",
-      "type": "Trợ thủ",
-      "desc": "Chú thích người dùng",
-      "id": "6",
-      "price": "18.888"
-    },
-    {
-      "name": "Ryoma",
-      "img": "https://lienquan.garena.vn/files/skin/b1a3864a554067fd8581d50a6cbd20755d5545baeb2b0.jpg",
-      "type": "Đấu sĩ",
-      "desc": "Chú thích người dùng",
-      "id": "7",
-      "price": "25.888"
-    },
-    {
-      "name": "Liliana",
-      "img": "https://lienquan.garena.vn/files/skin/39f4e07d9a4c4f662f4a8ee256c358475bc5a7961769a.jpg",
-      "type": "Pháp sư",
-      "desc": "Chú thích người dùng",
-      "id": "9",
-      "price": "18.888"
-    },
-    {
-      "name": "Và đây là pholotino",
-      "img": "https://lienquan.garena.vn/files/skin/0d8171fed4e3d81310901b52ce41ff505d55457124cc4.png",
-      "type": "Đấu sĩ",
-      "desc": "Chú thích người dùng",
-      "id": "9",
-      "price": "18.888"
-    }
-  ]
+    "posts": [{
+        "title": "5 KINH NGHIỆM ĐI RỪNG HỮU ÍCH TRONG LIÊN QUÂN MOBILE",
+        "img": "https://lienquan.garena.vn/files/skin/5159a548e4a7ef3a7b082059fd3a2a2a5ac73e186c7d5.jpg",
+        "descMini": "Kinh nghiệm đi rừng hữu ích trong Liên Quân Mobile",
+        "desc": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+        "id": "7"
+    }],
+    "users": [{
+            "email": "abc@gmail.com",
+            "password": "$2a$10$657p9bD7APhYBrzN7MjlC.i11WoORlRosFSdetkadxPLBABD/Dfjm",
+            "username": "Minh Dung",
+            "id": 1
+        },
+        {
+            "email": "thaopt@gmail.com",
+            "password": "$2a$10$atg589JfxV5XqSN7jTsh8.qj59GEP0G7jQPq1sP6kft3VULVlgEyK",
+            "username": "thao",
+            "id": 8
+        },
+        {
+            "email": "dung@gmail.com",
+            "password": "$2a$10$JkI5nG9oacAkY5AlKX0o7OMCSSc9yODEiEyxlKVnssJmn.4U9KBO2",
+            "username": "Minhdung",
+            "id": 10
+        },
+        {
+            "email": "dungtmph16743@fpt.edu.vn",
+            "password": "$2a$10$h/GVKOT5ttNWxZY6kfwcM.6IpTIRPawVrD6/JhBlb2SD4uHExh9Qy",
+            "username": "Pholotino",
+            "id": 11
+        }
+    ],
+    "products": [{
+            "name": "Nakroth",
+            "img": "https://lienquan.garena.vn/files/skin/c2f3364ac1c81a67cc39e031b05d21ef5c41d1a401795.jpg",
+            "type": "Sát thủ",
+            "desc": "Chú thích người dùng",
+            "id": "1",
+            "price": "18.888",
+            "categoryId": 1
+        },
+        {
+            "name": "Tulen",
+            "img": "https://lienquan.garena.vn/files/skin/5159a548e4a7ef3a7b082059fd3a2a2a5ac73e186c7d5.jpg",
+            "type": "Pháp sư",
+            "desc": "Chú thích người dùng",
+            "id": "2",
+            "price": "18.888"
+        },
+        {
+            "name": "Violet",
+            "img": "https://lienquan.garena.vn/files/skin/d8b09710ebceb2d01dd1f79a79ae0a92590c02a01a161.jpg",
+            "type": "Xạ thủ",
+            "desc": "Chú thích người dùng",
+            "id": "3",
+            "price": "18.888"
+        },
+        {
+            "name": "Toro",
+            "img": "https://lienquan.garena.vn/files/skin/134e0d0f72e41584ba3e263ab5128ef7583ffb23e6e58.jpg",
+            "type": "Đỡ đòn",
+            "desc": "Chú thích người dùng",
+            "id": "4",
+            "price": "13.888"
+        },
+        {
+            "name": "Zip",
+            "img": "https://lienquan.garena.vn/files/skin/b85f496bf0380fd9bdf490a1dd74ea0e5d3826133a4ea.jpg",
+            "type": "Trợ thủ",
+            "desc": "Chú thích người dùng",
+            "id": "6",
+            "price": "18.888"
+        },
+        {
+            "name": "Ryoma",
+            "img": "https://lienquan.garena.vn/files/skin/b1a3864a554067fd8581d50a6cbd20755d5545baeb2b0.jpg",
+            "type": "Đấu sĩ",
+            "desc": "Chú thích người dùng",
+            "id": "7",
+            "price": "25.888"
+        },
+        {
+            "name": "Liliana",
+            "img": "https://lienquan.garena.vn/files/skin/39f4e07d9a4c4f662f4a8ee256c358475bc5a7961769a.jpg",
+            "type": "Pháp sư",
+            "desc": "Chú thích người dùng",
+            "id": "9",
+            "price": "18.888"
+        },
+        {
+            "name": "Và đây là pholotino",
+            "img": "https://lienquan.garena.vn/files/skin/0d8171fed4e3d81310901b52ce41ff505d55457124cc4.png",
+            "type": "Đấu sĩ",
+            "desc": "Chú thích người dùng",
+            "id": "9",
+            "price": "18.888"
+        }
+    ],
+    "category": [{
+        "id": 1,
+        "type": "Sát thủ"
+    }]
 }

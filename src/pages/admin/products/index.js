@@ -86,7 +86,7 @@ const AdminProducts = {
                                 </td>
                                
                                 <td class="px-6 py-4  whitespace-nowrap  text-sm font-medium">
-                                    <a href="/admin/news/${pro.id}/edit" class="text-indigo-600 hover:text-red-600">Edit</a>
+                                    <a href="/admin/products/${pro.id}/edit" class="text-indigo-600 hover:text-red-600">Edit</a>
                                 </td>
                                  <td class="px-6 py-4  whitespace-nowrap text-right text-sm font-medium">
                                     <button data-id="${pro.id}" class="btn btn-remove text-indigo-600 hover:text-red-600"> <div class=" flex-shrink-0 h-10 w-10">
