@@ -1,5 +1,3 @@
-import Header from "../components/header";
-import Footer from "../components/footer";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
 import { signin } from "../api/user";
@@ -9,12 +7,12 @@ const signIn = {
     render() {
         return /* html */ `
         <style>
-		label.error{
-			color: red;
-		}
+		      label.error{
+			      color: red;
+		      }
 	    </style>
             <div class="w-full min-h-screen bg-gray-50 flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
-            <div class="w-full sm:max-w-md p-5 mx-auto">
+            <div class="w-full rounded-xl shadow-2xl sm:max-w-md p-5 mx-auto">
               
               <img class="mb-2 text-center w-48 " src="../../images/welcome.png" alt="welcome">
               <form id="formSignin" method="POST">
@@ -81,7 +79,7 @@ const signIn = {
                 rules: {
                     "email": {
                         required: true,
-                        maxlength: 10
+                        minlength: 10
                     },
                     "password": {
                         required: true,
@@ -91,7 +89,7 @@ const signIn = {
                 },
                 messages: {
                     "email": {
-                        required: "Bắt buộc nhập username",
+                        required: "Bắt buộc nhập email",
                         maxlength: "Hãy nhập tối đa 10 ký tự"
                     },
                     "password": {
