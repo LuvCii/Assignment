@@ -1,8 +1,8 @@
 import { reRender } from "../utils";
 import { getAll } from "../api/user";
 const NavAdmin = {
-        render() {
-            return /* html */ `
+    render() {
+        return /* html */ `
         <div class="min-h-full">
   <nav class="bg-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,15 +35,7 @@ const NavAdmin = {
 
             <!-- Profile dropdown -->
             <div class="ml-3 relative">
-              <div class="flex">
-                <button type="button" class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                  <span class="sr-only">Open user menu</span>
-                  <img class="bg-slate-50 h-9 w-9 rounded-full" src="../../images/hacker.png" alt="">
-                </button>
-                 ${localStorage.getItem('user') ? `
-                              <span id="accountInfo" class="font-bold italic text-slate-200 ml-3 mt-[5px]">Username</span>
-                            `: ""}
-              </div>
+             
 
             </div>
           </div>
@@ -75,18 +67,6 @@ const NavAdmin = {
 
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
-
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
-
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Reports</a>
-      </div>
       <div class="pt-4 pb-3 border-t border-gray-700">
         <div class="flex items-center px-5">
           <div class="flex-shrink-0">
@@ -100,13 +80,6 @@ const NavAdmin = {
             </svg>
           </button>
         </div>
-        <div class="mt-3 px-2 space-y-1">
-          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Your Profile</a>
-
-          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Settings</a>
-
-          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Sign out</a>
-        </div>
       </div>
     </div>
   </nav>
@@ -115,7 +88,7 @@ const NavAdmin = {
 </div>
         `
     },
-     afterRender() {
+    afterRender() {
         // lấy thông tin username từ localStorage và hiển thị ra ngoài
         const username = JSON.parse(localStorage.getItem("user")).username;
         document.querySelector('#accountInfo').innerHTML = username;

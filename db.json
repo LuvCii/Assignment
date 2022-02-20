@@ -38,6 +38,18 @@
       "password": "$2a$10$uIlYxjlYbTHSK7ZqicHT9.vnBmfrHVJakGday6euB1.4HRGLsA8wa",
       "username": "aaaa",
       "id": 12
+    },
+    {
+      "email": "aab@gmail.com",
+      "password": "$2a$10$XNiv384qV.6a2KLR86eZaOyu66ifREo2nJ9yRC721eNQpSyQhbtIe",
+      "username": "aaab",
+      "id": 13
+    },
+    {
+      "email": "aab@gmail",
+      "password": "$2a$10$h8WIk8YiAITPvW2icSTLg.7vkBygV3e/SKQ.4YyNruNREKa0TiNpS",
+      "username": "aaaaaaa",
+      "id": 14
     }
   ],
   "products": [
@@ -103,8 +115,32 @@
       "img": "https://lienquan.garena.vn/files/skin/0d8171fed4e3d81310901b52ce41ff505d55457124cc4.png",
       "type": "Đấu sĩ",
       "desc": "Chú thích người dùng",
-      "id": "9",
+      "id": "10",
       "price": "18.888"
+    },
+    {
+      "name": "iphone",
+      "type": "Hai Dương",
+      "price": "12222",
+      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645350540/Strip_search____Jungkook_18_-_Fight_cfva4e.jpg",
+      "desc": "No1",
+      "id": 11
+    },
+    {
+      "id": 13,
+      "name": "Tuan",
+      "type": "Tuan",
+      "price": "1222",
+      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645353175/%C4%90inh_%C4%90%E1%BA%A1i_Eas_Lov_dinh_dai_TikTok___Xem_c%C3%A1c_video_m%E1%BB%9Bi_nh%E1%BA%A5t_c%E1%BB%A7a_%C4%90inh_%C4%90%E1%BA%A1i_Eas_Lov_tr%C3%AAn_TikTok_fnv6mv.jpg",
+      "desc": "                                            xau trai No1"
+    },
+    {
+      "id": 12,
+      "name": "Minh",
+      "type": "Pháp sư",
+      "price": "23000",
+      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645366481/hearts_magic_bvbe3e.gif",
+      "desc": "                                                                                Gaa"
     }
   ],
   "category": [

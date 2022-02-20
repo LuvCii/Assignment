@@ -58,7 +58,7 @@ const Products = {
                 </div>
 
                 <main class=" min-h-screen w-full">
-                <h1 class="text-2xl text-center uppercase font-semibold">Tất cả sản phẩm</h1>
+                <h1 class="text-2xl text-center uppercase font-semibold">Sản phẩm</h1>
                     <div class="mt-5 bg-gray-100 flex flex-wrap  items-center">
                          ${data.map((product) => /*html */ `
                             <a href="/products/${product.id}">

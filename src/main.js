@@ -9,6 +9,8 @@ import signIn from "./pages/signin";
 import signUp from "./pages/signup";
 import CartPage from "./pages/cart";
 import AdminProducts from "./pages/admin/products";
+import AdminProductsAdd from "./pages/admin/products/add";
+import AdminProductsEdit from "./pages/admin/products/edit";
 import AdminNews from "./pages/admin/news";
 import AdminNewsAdd from "./pages/admin/news/add";
 import AdminNewsEdit from "./pages/admin/news/edit";
@@ -60,7 +62,9 @@ router.on({
     "/signin": () => print(signIn),
     "/signup": () => print(signUp),
     "/admin": () => print(AdminDashboard),
+    "/admin/products/add": () => print(AdminProductsAdd),
     "/admin/products": () => print(AdminProducts),
+    "/admin/products/:id/edit": ({ data }) => print(AdminProductsEdit, data.id),
     // "/admin/dashboard": () => console.log("admin product"),
     "/admin/news": () => print(AdminNews),
     "/admin/news/add": () => print(AdminNewsAdd),
