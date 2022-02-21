@@ -2,7 +2,7 @@ const Footer = {
     render() {
         return /* html */ `
         
-            <footer class="p-4 bg-white sm:p-6 dark:bg-gray-800">
+            <footer class="p-4 bg-white sm:p-6 dark:bg-black">
                 <div class="md:flex md:justify-between">
                     <div class="mb-6 md:mb-0">
                     <a href="https://flowbite.com" target="_blank" class="flex items-center">
@@ -29,7 +29,7 @@ const Footer = {
                 <a href="https://github.com/themesberg/flowbite" target="_blank" class="text-gray-600 hover:underline dark:text-gray-400">Github</a>
                 </li>
                 <li>
-                <a href="https://discord.gg/4eeurUVvTy" target="_blank" class="text-gray-600 hover:underline dark:text-gray-400">Discord</a>
+                <a href="https://www.facebook.com/minhdung.tran.9237244/" target="_blank" class="text-gray-600 hover:underline dark:text-gray-400">Facebook</a>
                 </li>
                 </ul>
                 </div>

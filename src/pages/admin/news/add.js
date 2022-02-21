@@ -1,5 +1,9 @@
 import NavAdmin from "../../../components/navadmin";
-
+import axios from "axios";
+import AdminNews from ".";
+import { add } from "../../../api/post";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 const AdminNewsAdd = {
     render() {
         return /*html*/ `
@@ -12,7 +16,7 @@ const AdminNewsAdd = {
                             Quay lại
                         </a>
             <main>
-              <form class="">
+              <form class="" id="form-add-post">
                 <div class="bg-indigo-50 min-h-screen md:px-20 pt-6">
                   <div class=" bg-white rounded-md px-6 py-10 max-w-[1000px] mx-auto">
                     <h1 class="text-center text-2xl font-bold text-gray-500 mb-10">ADD POST</h1>
@@ -20,6 +24,10 @@ const AdminNewsAdd = {
                       <div>
                         <label for="title" class="text-lx font-serif">Title:</label>
                         <input type="text" placeholder="title" id="title" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
+                      </div>
+                      <div>
+                        <label for="title" class="text-lx font-serif">Description mini:</label>
+                        <input type="text" placeholder="title" id="descMini" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                       </div>
                       <div>
                         <label for="description" class="block mb-2 text-lg font-serif">Description:</label>
@@ -48,6 +56,7 @@ const AdminNewsAdd = {
                       </div>
                     </div>
 
+                     <img src="" class="mx-auto mt-3 w-52 mb-3 object-cover rounded-md" id="img-preview"/>
                       <button class="mt-4 px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">ADD POST</button>
                     </div>
                   </div>
@@ -62,6 +71,52 @@ const AdminNewsAdd = {
 
 
         `
-    }
+    },
+
+
+    afterRender() {
+        const formAdd = document.querySelector("#form-add-post");
+        const imgPreview = document.querySelector("#img-preview");
+        const imgPost = document.querySelector("#file-upload");
+        const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/di7fl16mp/image/upload";
+        const CLOUDINARY_PRESET = "ml_default";
+
+        // Preview image
+        imgPost.addEventListener("change", (e) => {
+            imgPreview.src = URL.createObjectURL(e.target.files[0]);
+        });
+
+        formAdd.addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const file = imgPost.files[0];
+
+            const formData = new FormData();
+            formData.append("file", file);
+            formData.append("upload_preset", CLOUDINARY_PRESET);
+
+            // call api cloudinary
+            const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
+                    headers: {
+                        "Content-Type": "application/form-data"
+                    }
+                })
+                // call api thêm bài viết
+            add({
+                title: document.querySelector("#title").value,
+                descMini: document.querySelector("#descMini").value,
+                img: data.url,
+                desc: document.querySelector("#description").value,
+            });
+            setTimeout(() => {
+                if (add) {
+                    toastr.success("Thêm bài viết mới thành công");
+                    window.location.href = "/#/admin/news";
+                } else {
+                    toastr.success("Thêm bài viết không thành công");
+                }
+            }, 1000);
+            reRender(AdminNews, "#app");
+        });
+    },
 }
 export default AdminNewsAdd;

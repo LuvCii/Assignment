@@ -5,7 +5,7 @@ import "toastr/build/toastr.min.css";
 import { getAll, remove } from "../../../api/post";
 
 
-const AdminProducts = {
+const AdminNews = {
         async render() {
             const { data } = await getAll();
             return /* html */ `
@@ -104,11 +104,11 @@ const AdminProducts = {
                      // gọi hàm delete trong folder API và bắn id vào hàm
                     remove(id).then(() => {
                         toastr.success("Đã xóa sản phẩm thành công");
-                        reRender(AdminProducts, "#app");
+                        reRender(AdminNews, "#app");
                     })
                 }
             })
         });
     }
 }
-export default AdminProducts;
+export default AdminNews;

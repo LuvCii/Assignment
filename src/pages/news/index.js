@@ -9,6 +9,7 @@ const News = {
                 ${Header.render() } 
             </header>
             <main>
+            <h1 class="text-center my-6 text-4xl font-bold">Cốt truyện</h1>
                 <div aria-label="group of cards" tabindex="0" class="focus:outline-none py-8 w-full">
             <div class="lg:flex items-center justify-center w-full">
                  ${data.map((post) => /*html */ `
@@ -18,7 +19,7 @@ const News = {
                             <div class="flex items-start justify-between w-full">
                                 <div class="pl-3 w-full">
                                     <p tabindex="0" class="focus:outline-none text-xl font-medium leading-5 text-gray-800">${post.title}</p>
-                                    <p tabindex="0" class="focus:outline-none text-sm leading-normal pt-2 text-gray-500">36 members</p>
+                                    
                                 </div>
                                 <div role="img" aria-label="bookmark">
                                     <svg  class="focus:outline-none" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">

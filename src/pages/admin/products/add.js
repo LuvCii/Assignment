@@ -1,7 +1,9 @@
 import NavAdmin from "../../../components/navadmin";
 import axios from "axios";
-// import AdminProducts from ".";
+import AdminProducts from ".";
 import { add } from "../../../api/product";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 // import { reRender } from "../../../utils";
 
 const AdminProductsAdd = {
@@ -12,7 +14,7 @@ const AdminProductsAdd = {
             <header class="bg-white shadow">
             
             </header>
-                        <a href="/admin/news" class="absolute right-[11%] top-[10%] px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <a href="/admin/products" class="absolute right-[11%] top-[10%] px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Quay lại
                         </a>
             <main>
@@ -23,19 +25,19 @@ const AdminProductsAdd = {
                     <div class="space-y-4">
                       <div>
                         <label for="title" class="text-lx font-serif">Name:</label>
-                        <input id="name" type="text" placeholder="title" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
+                        <input id="name" type="text" placeholder="Name" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                       </div>
                       <div>
                         <label for="title" class="text-lx font-serif">Type:</label>
-                        <input id="type" type="text" placeholder="title" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
+                        <input id="type" type="text" placeholder="Type" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                       </div>
                        <div>
                         <label for="title" class="text-lx font-serif">Price:</label>
-                        <input id="price" type="text" placeholder="title" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
+                        <input id="price" type="text" placeholder="Price" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                       </div>
                       <div>
                         <label for="description" class="block mb-2 text-lg font-serif">Description:</label>
-                        <textarea id="description" cols="30" rows="10" placeholder="whrite here.." class="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md"></textarea>
+                        <textarea id="description" cols="30" rows="10" placeholder="Mô tả.." class="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md"></textarea>
                       </div>
 
                        <div>
@@ -60,6 +62,8 @@ const AdminProductsAdd = {
                       </div>
                     </div>
 
+                    <img src="" class="mx-auto mt-3 w-52 mb-3 object-cover rounded-md" id="img-preview"/>
+
                       <button class="mt-4 px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">ADD PRODUCT</button>
                     </div>
                   </div>
@@ -77,10 +81,15 @@ const AdminProductsAdd = {
     },
     afterRender() {
         const formAdd = document.querySelector("#form-add-pro");
-        // const imgPreview = document.querySelector("#img-preview");
+        const imgPreview = document.querySelector("#img-preview");
         const imgPro = document.querySelector("#file-upload");
         const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/di7fl16mp/image/upload";
         const CLOUDINARY_PRESET = "ml_default";
+
+        // Preview image
+        imgPro.addEventListener("change", (e) => {
+            imgPreview.src = URL.createObjectURL(e.target.files[0]);
+        });
 
         formAdd.addEventListener("submit", async function(e) {
             e.preventDefault();
@@ -104,6 +113,15 @@ const AdminProductsAdd = {
                 img: data.url,
                 desc: document.querySelector("#description").value,
             });
+            setTimeout(() => {
+                if (add) {
+                    toastr.success("Thêm sản phẩm mới thành công");
+                    window.location.href = "/#/admin/products";
+                } else {
+                    toastr.success("Thêm sản phẩm không thành công");
+                }
+            }, 1000);
+            reRender(AdminProducts, "#app");
         });
     },
 }

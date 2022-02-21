@@ -1,11 +1,18 @@
 {
   "posts": [
     {
-      "title": "5 KINH NGHIỆM ĐI RỪNG HỮU ÍCH TRONG LIÊN QUÂN MOBILE",
-      "img": "https://lienquan.garena.vn/files/skin/5159a548e4a7ef3a7b082059fd3a2a2a5ac73e186c7d5.jpg",
-      "descMini": "Kinh nghiệm đi rừng hữu ích trong Liên Quân Mobile",
-      "desc": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "id": "7"
+      "id": 1,
+      "title": "Cốt truyện liliana",
+      "descMini": "Lili đó ",
+      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645374005/liliana_mc3gcd.jpg",
+      "desc": "Một trong những thực thể cổ xưa nhất ở Athanor còn tồn tại, Liliana đã được sinh ra khi thế giới vẫn còn trong trạng thái hỗn độn và vạn vật sinh tồn đều nhờ vào bản năng."
+    },
+    {
+      "title": "Cốt truyện Nakroth",
+      "descMini": "Lưỡi Đao Phán Xét (Gươm hành quyết)",
+      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645387975/nakroth_gltcoe.jpg",
+      "desc": "Binh lính phụ trách canh gác liền nhanh chóng dịch chuyển rào cản ngựa, đứng bên đường kính sợ nhìn đoàn quân vừa mới chiến thắng trở về.Những người đứng ở đó, bao gồm cả nông phu, không ai không biết đến truyền thuyết về đội quân huyết sắc kỵ sĩ: Phàm đánh là phải thắng, hễ thắng phải đánh tới cùng.Huyết kỳ đi qua, không chừa một mạng.Thậm chí có người còn so sánh bọn hắn với đội quân ác ma hàng trăm năm trước tấn công lục địa Athanor.",
+      "id": 2
     }
   ],
   "users": [
@@ -55,92 +62,43 @@
   "products": [
     {
       "name": "Nakroth",
-      "img": "https://lienquan.garena.vn/files/skin/c2f3364ac1c81a67cc39e031b05d21ef5c41d1a401795.jpg",
       "type": "Sát thủ",
-      "desc": "Chú thích người dùng",
-      "id": "1",
-      "price": "18.888",
-      "categoryId": 1
-    },
-    {
-      "name": "Tulen",
-      "img": "https://lienquan.garena.vn/files/skin/5159a548e4a7ef3a7b082059fd3a2a2a5ac73e186c7d5.jpg",
-      "type": "Pháp sư",
-      "desc": "Chú thích người dùng",
-      "id": "2",
-      "price": "18.888"
-    },
-    {
-      "name": "Violet",
-      "img": "https://lienquan.garena.vn/files/skin/d8b09710ebceb2d01dd1f79a79ae0a92590c02a01a161.jpg",
-      "type": "Xạ thủ",
-      "desc": "Chú thích người dùng",
-      "id": "3",
-      "price": "18.888"
-    },
-    {
-      "name": "Toro",
-      "img": "https://lienquan.garena.vn/files/skin/134e0d0f72e41584ba3e263ab5128ef7583ffb23e6e58.jpg",
-      "type": "Đỡ đòn",
-      "desc": "Chú thích người dùng",
-      "id": "4",
-      "price": "13.888"
-    },
-    {
-      "name": "Zip",
-      "img": "https://lienquan.garena.vn/files/skin/b85f496bf0380fd9bdf490a1dd74ea0e5d3826133a4ea.jpg",
-      "type": "Trợ thủ",
-      "desc": "Chú thích người dùng",
-      "id": "6",
-      "price": "18.888"
-    },
-    {
-      "name": "Ryoma",
-      "img": "https://lienquan.garena.vn/files/skin/b1a3864a554067fd8581d50a6cbd20755d5545baeb2b0.jpg",
-      "type": "Đấu sĩ",
-      "desc": "Chú thích người dùng",
-      "id": "7",
-      "price": "25.888"
+      "price": "18 888",
+      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371018/nakroth_e6xzkw.jpg",
+      "desc": "Khiêu chiến",
+      "id": 20
     },
     {
       "name": "Liliana",
-      "img": "https://lienquan.garena.vn/files/skin/39f4e07d9a4c4f662f4a8ee256c358475bc5a7961769a.jpg",
       "type": "Pháp sư",
-      "desc": "Chú thích người dùng",
-      "id": "9",
-      "price": "18.888"
+      "price": "18 888",
+      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371230/liliana_i0ufic.jpg",
+      "desc": "Nguyệt mị ly",
+      "id": 21
     },
     {
-      "name": "Và đây là pholotino",
-      "img": "https://lienquan.garena.vn/files/skin/0d8171fed4e3d81310901b52ce41ff505d55457124cc4.png",
+      "name": "Ryoma",
       "type": "Đấu sĩ",
-      "desc": "Chú thích người dùng",
-      "id": "10",
-      "price": "18.888"
+      "price": "25 888",
+      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371323/ryoma_whwtk0.jpg",
+      "desc": "Samurai huyền thoại",
+      "id": 22
     },
     {
-      "name": "iphone",
-      "type": "Hai Dương",
-      "price": "12222",
-      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645350540/Strip_search____Jungkook_18_-_Fight_cfva4e.jpg",
-      "desc": "No1",
-      "id": 11
+      "name": "Violet",
+      "type": "Xạ thủ",
+      "price": "13 888",
+      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371461/violet_prvijf.jpg",
+      "desc": "Nữ hoàng pháo hoa",
+      "id": 23
     },
     {
-      "id": 13,
-      "name": "Tuan",
-      "type": "Tuan",
-      "price": "1222",
-      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645353175/%C4%90inh_%C4%90%E1%BA%A1i_Eas_Lov_dinh_dai_TikTok___Xem_c%C3%A1c_video_m%E1%BB%9Bi_nh%E1%BA%A5t_c%E1%BB%A7a_%C4%90inh_%C4%90%E1%BA%A1i_Eas_Lov_tr%C3%AAn_TikTok_fnv6mv.jpg",
-      "desc": "                                            xau trai No1"
-    },
-    {
-      "id": 12,
-      "name": "Minh",
-      "type": "Pháp sư",
-      "price": "23000",
-      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645366481/hearts_magic_bvbe3e.gif",
-      "desc": "                                                                                Gaa"
+      "name": "Cresht",
+      "type": "Đỡ đòn",
+      "price": "",
+      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371573/cresht_aycwts.jpg",
+      "desc": "Cá cắn cáp",
+      "id": 24
     }
   ],
   "category": [

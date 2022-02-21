@@ -10,8 +10,15 @@ const DetailNews = {
           ${Header.render() } 
         </header>
         <main>
-            <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">${data.title}</h1>
-            <img alt="ecommerce" class="" src="${data.img}">
+            <div class="min-h-screen min-w-screen bg-gray-100 flex items-center justify-center">
+  <div>
+    <div class="flex flex-col w-[1200px] bg-white px-8 py-6 rounded-xl space-y-5 items-center">
+      <h3 class="font-serif font-bold text-gray-900 text-xl">${data.title}</h3>
+      <img class="w-full rounded-md" src="${data.img}" alt="motivation" />
+      <p class="text-center leading-relaxed">${data.desc}</p>
+    </div>
+  </div>
+</div>
         </main>
         <footer>
              ${Footer.render() } 

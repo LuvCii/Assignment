@@ -1,64 +1,46 @@
 import NavAdmin from "../../../components/navadmin";
-import news from "../../../data";
+import AdminNews from ".";
+import axios from "axios";
+import { reRender } from "../../../utils";
+import {get, update } from "../../../api/post";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 
 const AdminNewsEdit = {
-    render(id) {
-        const result = news.find((post) => post.id === id);
+    async render(id) {
+        const { data } = await get(id);
         return /*html*/ `
         <div class="min-h-full">
             ${NavAdmin.render()}
             <header class="bg-white shadow">
             
             </header>
+                        <a href="/admin/news" class="absolute right-[11%] top-[15%] px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Quay lại
+                        </a>
             <main>
-            <div>
-            <div class="mt-6 ">
-              <div class="mx-auto mt-14 mx-44 md:mt-0 md:col-span-2">
-                <form action="#" method="POST">
-                  <div class="shadow sm:rounded-md sm:overflow-hidden">
-                    <div class=" px-4 py-5 bg-white space-y-6 sm:p-6">
-                      <div class="grid grid-cols-3 gap-6">
-                        <div class="col-span-3 sm:col-span-2">
-                          <label for="company-website" class="block text-sm font-medium text-gray-700">
-                            Name
-                          </label>
-                          <div class="mt-1 flex rounded-md shadow-sm">
-                            <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
-                              Enter your name
-                            </span>
-                            <input type="text" name="company-website" id="company-website" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Please Enter Namet" value="${result.title}">
-                          </div>
-                        </div>
-                      </div>
-          
+              <form class="" id="form-edit-post">
+                <div class="bg-indigo-50 min-h-screen md:px-20 pt-6">
+                  <div class=" bg-white rounded-md px-6 py-10 max-w-[1000px] mx-auto">
+                    <h1 class="text-center text-2xl font-bold text-gray-500 mb-10">EDIT POST</h1>
+                    <div class="space-y-4">
                       <div>
-                        <label for="about" class="block text-sm font-medium text-gray-700">
-                          Content
-                        </label>
-                        <div class="mt-1">
-                          <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Please Enter Description">${result.desc}</textarea>
-                        </div>
+                        <label for="title" class="text-lx font-serif">Title:</label>
+                        <input value="${data.title}" type="text" placeholder="title" id="title" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                       </div>
-          
                       <div>
-                        <label class="block text-sm font-medium text-gray-700">
-                          Photo
-                        </label>
-                        <div class="mt-1 flex items-center">
-                           <div>
-                              <img src="${result.img}" width="50px" height="50px" class="rounded-[50%] object-cover" />
-                           </div>
-                           <label for="img" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                           Change
-                           </label>
-                           <input type="file" id="img" class="hidden">
-                        </div>
+                        <label for="title" class="text-lx font-serif">Description mini:</label>
+                        <input value="${data.descMini}" type="text" placeholder="title" id="descMini" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                       </div>
-          
                       <div>
-                        <label class="block text-sm font-medium text-gray-700">
-                          Cover photo
-                        </label>
+                        <label for="description" class="block mb-2 text-lg font-serif">Description:</label>
+                         <textarea id="desc" name="about" rows="10"
+                                                class="shadow-sm bg-indigo-50 outline-none text-xl font-serif mt-1 block w-full sm:text-sm border border-gray-300 rounded-md p-3">
+                                            ${data.desc}</textarea>
+                      </div>
+
+                       <div>
+                       <label for="description" class="block mb-2 text-lg font-serif">Image</label>
                         <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
                           <div class="space-y-1 text-center">
                             <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
@@ -78,44 +60,69 @@ const AdminNewsEdit = {
                         </div>
                       </div>
                     </div>
-                    <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                      <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Edit
-                      </button>
+
+                     <img src="${data.img}" class="mx-auto mt-3 w-52 mb-3 object-cover rounded-md" id="img-preview"/>
+                      <button class="mt-4 px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-indigo-100 bg-indigo-600  ">EDIT POST</button>
                     </div>
                   </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          
-          <div class="hidden sm:block" aria-hidden="true">
-            <div class="py-5">
-              <div class="border-t border-gray-200"></div>
-            </div>
-          </div>
-          
-         
-                </form>
-              </div>
-            </div>
-          </div>
-          
-          <div class="hidden sm:block" aria-hidden="true">
-            <div class="py-5">
-              <div class="border-t border-gray-200"></div>
-            </div>
-          </div>
-          
-          
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+                </div>
+              </form>
             </main>
         </div>
         `
-    }
+    },
+
+    afterRender(id) {
+        const formEdit = document.querySelector("#form-edit-post");
+        const imgPreview = document.querySelector("#img-preview");
+        const imgPost = document.querySelector("#file-upload");
+        const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/di7fl16mp/image/upload";
+        const CLOUDINARY_PRESET = "ml_default";
+        let imgLink = "";
+
+        imgPost.addEventListener("change", (e) => {
+            imgPreview.src = URL.createObjectURL(e.target.files[0]);
+        });
+
+        // Submit form
+        formEdit.addEventListener("submit", async(e) => {
+            e.preventDefault();
+            // lấy giá trị input file
+            const file = document.querySelector("#file-upload").files[0];
+            if (file) {
+                // tạo object và gắn giá trị vào các thuộc tính của formData
+                const formData = new FormData();
+                formData.append("file", file);
+                formData.append("upload_preset", CLOUDINARY_PRESET);
+
+                // call API cloudinary để đẩy ảnh lên
+                const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
+                    headers: {
+                        "Content-Type": "application/form-data",
+                    },
+                });
+                imgLink = data.url;
+            }
+
+            // call api thêm bài viết
+            update({
+                id,
+                title: document.querySelector("#title").value,
+                desMini: document.querySelector("#descMini").value,
+                //  Nếu imgLink có giá trị thì sẽ lấy giá trị của imgLink ngược lại thì rỗng
+                img: imgLink || imgPreview.src,
+                desc: document.querySelector("#desc").value,
+            });
+            setTimeout(() => {
+                if (update) {
+                    toastr.success("Sửa bài viết thành công");
+                    window.location.href = "/#/admin/news";
+                } else {
+                    toastr.success("Sửa sản phẩm không thành công");
+                }
+            }, 1000);
+            reRender(AdminNews, "#app");
+        });
+    },
 }
 export default AdminNewsEdit;

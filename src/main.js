@@ -3,6 +3,7 @@ import DetailPage from "./pages/detail";
 import HomePage from "./pages/homepage";
 import Heroes from "./pages/heroes";
 import Products from "./pages/products";
+import Search from "./pages/products/searchPage";
 import News from "./pages/news";
 import Contact from "./pages/contact";
 import signIn from "./pages/signin";
@@ -56,6 +57,11 @@ router.on({
     "/news": () => print(News),
     "/news/:id": ({ data }) => print(DetailNews, data.id),
     "/products": () => print(Products),
+    "/Search": () => print(Search),
+    "/search/:key": ({ data }) => {
+        const { key } = data;
+        print(Search, key);
+    },
     "/products/:id": ({ data }) => print(DetailProduct, data.id),
     "/cart": () => print(CartPage),
     "/contact": () => print(Contact),
@@ -68,11 +74,7 @@ router.on({
     // "/admin/dashboard": () => console.log("admin product"),
     "/admin/news": () => print(AdminNews),
     "/admin/news/add": () => print(AdminNewsAdd),
-    "/admin/news/:id/edit": ({ data }) => {
-        // console.log(data);
-        const { id } = data;
-        print(AdminNewsEdit.render(id));
-    },
+    "/admin/news/:id/edit": ({ data }) => print(AdminNewsEdit, data.id),
     "/admin/users": () => print(AdminUser)
 
 

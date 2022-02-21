@@ -117,8 +117,14 @@ const AdminProductsEdit = {
                 img: imgLink || imgPreview.src,
                 desc: document.querySelector("#desc").value,
             });
-            window.location.href = "/#/admin/products";
-
+            setTimeout(() => {
+                if (update) {
+                    toastr.success("Sửa sản phẩm thành công");
+                    window.location.href = "/#/admin/products";
+                } else {
+                    toastr.success("Sửa sản phẩm không thành công");
+                }
+            }, 1000);
             reRender(AdminProducts, "#app");
         });
     },

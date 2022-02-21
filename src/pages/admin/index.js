@@ -107,7 +107,7 @@ const AdminDashboard = {
                                     </div>
     
                                     <div class="mx-5">
-                                        <h4 class="text-2xl font-semibold text-gray-700">8,282</h4>
+                                       
                                         <div class="text-gray-500">Quản lý Users</div>
                                     </div>
                                 </div></a>
@@ -120,7 +120,7 @@ const AdminDashboard = {
                                     </div>
     
                                     <div class="mx-5">
-                                        <h4 class="text-2xl font-semibold text-gray-700">200,521</h4>
+                                        
                                         <div class="text-gray-500">Quản lý tin tức</div>
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@ const AdminDashboard = {
                                     </div>
     
                                     <div class="mx-5">
-                                        <h4 class="text-2xl font-semibold text-gray-700">200,521</h4>
+                                        
                                         <div class="text-gray-500">Quản lý giỏ hàng</div>
                                     </div>
                                 </div></a>
@@ -146,7 +146,6 @@ const AdminDashboard = {
                                     </div>
     
                                     <div class="mx-5">
-                                        <h4 class="text-2xl font-semibold text-gray-700">200,521</h4>
                                         <div class="text-gray-500">Quản lý danh mục</div>
                                     </div>
                                 </div></a>
@@ -159,7 +158,6 @@ const AdminDashboard = {
                                     </div>
     
                                     <div class="mx-5">
-                                        <h4 class="text-2xl font-semibold text-gray-700">215,542</h4>
                                         <div class="text-gray-500">Quản lý sản phẩm</div>
                                     </div>
                                 </div></a>
@@ -173,7 +171,6 @@ const AdminDashboard = {
                                     </div>
     
                                     <div class="mx-5">
-                                        <h4 class="text-2xl font-semibold text-gray-700">215,542</h4>
                                         <div class="text-gray-500">Quản lý tâm điểm tướng</div>
                                     </div>
                                 </div> </a>

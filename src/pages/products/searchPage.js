@@ -1,9 +1,10 @@
 import Header from "../../components/header";
 import Footer from "../../components/footer";
+import instance from "../../api/config";
 import { getAll } from "../../api/product";
-const Products = {
-        async render() {
-            const { data } = await getAll();
+const Search = {
+        async render(key) {
+            const { data } = await instance.get(`/products?q=${key}`);
             return /* html */ `
         <div class="max-w-full mx-auto">
         <header id="header">
@@ -15,13 +16,12 @@ const Products = {
                     <div class="mx-auto py-10">
                     <img class="w-28 mx-auto" src="../../../images/new.png" alt="new">
                     <nav class="px-4 flex justify-between py-6 mt-[20px]">
-                     <form class="search" method="">
+                     <form class="search">
                     <div class="flex items-center bg-gray-100 px-2 py-2 rounded-md space-x-3 w-64">
-                        <input type="text" placeholder="search" class="search-input bg-gray-100 outline-none w-full" />
-                        <button><svg xmlns="http://www.w3.org/2000/svg" class="search-input h-5 w-5 cursor-pointer text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <input type="text" name="keyword" placeholder="search" class="search-input bg-gray-100 outline-none w-full" />
+                        <button><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 cursor-pointer text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg></button>
-                   
                     </div>
                      </form>
                     </nav>
@@ -61,7 +61,7 @@ const Products = {
                 </div>
 
                 <main class=" min-h-screen w-full">
-                <h1 class="text-2xl text-center uppercase font-semibold">Tất cả sản phẩm</h1>
+                <h1 class="text-2xl text-center uppercase font-semibold">Sản phẩm: ${key}</h1>
                     <div class="mt-5 bg-gray-100 flex flex-wrap  items-center">
                          ${data.map((product) => /*html */ `
                             <a href="/products/${product.id}">
@@ -94,8 +94,8 @@ const Products = {
     </div>
         `;
     },
-     afterRender() {
-        Header.afterRender();
+    afterRender() {
+        Search.afterRender();
         const searchBtn = document.querySelector(".search-input");
         const search = document.querySelector(".search");
         search.addEventListener("submit",(e)=>{
@@ -104,6 +104,5 @@ const Products = {
         });
         
     },
-};
-
-export default Products;
+}
+export default Search;

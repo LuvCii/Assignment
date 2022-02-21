@@ -49,6 +49,9 @@ const AdminProducts = {
                                      <th scope="col" class="w-1/4 px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
                                         Name
                                     </th>
+                                     <th scope="col" class="w-1/4 px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
+                                        Price
+                                    </th>
                                     <th scope="col" class="w-1/4 px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">
                                         Type
                                     </th>
@@ -74,6 +77,9 @@ const AdminProducts = {
                                 </td>
                                 <td class="px-6 py-4  whitespace-nowrap  text-sm font-medium">
                                     <span>${pro.name}</span>
+                                </td>
+                                <td class="px-6 py-4  whitespace-nowrap  text-sm font-medium">
+                                    <span>${pro.price} VNĐ</span>
                                 </td>
                                  <td class="px-6 py-4  whitespace-nowrap  text-sm font-medium">
                                     <span>${pro.type}</span>
