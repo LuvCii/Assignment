@@ -20,3 +20,7 @@ export const update = (cate) => {
     const url = `/category/${cate.id}`;
     return instance.put(url, cate);
 };
+export const getCategory = () => {
+    const url = `/category/?_embed=products`;
+    return instance.get(url)
+};

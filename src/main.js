@@ -5,6 +5,7 @@ import Heroes from "./pages/heroes";
 import Products from "./pages/products";
 import Search from "./pages/products/searchPage";
 import News from "./pages/news";
+import List from "./pages/listpro";
 import Contact from "./pages/contact";
 import signIn from "./pages/signin";
 import signUp from "./pages/signup";
@@ -13,13 +14,17 @@ import AdminProducts from "./pages/admin/products";
 import AdminProductsAdd from "./pages/admin/products/add";
 import AdminProductsEdit from "./pages/admin/products/edit";
 import AdminNews from "./pages/admin/news";
+import AdminCate from "./pages/admin/categories";
 import AdminNewsAdd from "./pages/admin/news/add";
+import AdminCateAdd from "./pages/admin/categories/add";
+import AdminCateEdit from "./pages/admin/categories/edit";
 import AdminNewsEdit from "./pages/admin/news/edit";
 import AdminDashboard from "./pages/admin";
 import AdminUser from "./pages/admin/users";
 import Profile from "./pages/profile";
 import DetailProduct from "./pages/products/detail";
 import DetailNews from "./pages/news/detail";
+import Category from "./pages/categoryPage";
 
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
@@ -54,9 +59,12 @@ router.on({
     "/": () => print(HomePage),
     "/profile": () => print(Profile),
     "/heroes": () => print(Heroes),
+    "/listpro": () => print(List),
     "/news": () => print(News),
-    "/news/:id": ({ data }) => print(DetailNews, data.id),
     "/products": () => print(Products),
+    "/news/:id": ({ data }) => print(DetailNews, data.id),
+    "/products/:id": ({ data }) => print(Products, data.id),
+    "/category/:id": ({ data }) => print(Category, data.id),
     "/Search": () => print(Search),
     "/search/:key": ({ data }) => {
         const { key } = data;
@@ -75,7 +83,10 @@ router.on({
     "/admin/news": () => print(AdminNews),
     "/admin/news/add": () => print(AdminNewsAdd),
     "/admin/news/:id/edit": ({ data }) => print(AdminNewsEdit, data.id),
-    "/admin/users": () => print(AdminUser)
+    "/admin/users": () => print(AdminUser),
+    "/admin/categories": () => print(AdminCate),
+    "/admin/categories/add": () => print(AdminCateAdd),
+    "/admin/categories/:id/edit": ({ data }) => print(AdminCateEdit, data.id),
 
 
 

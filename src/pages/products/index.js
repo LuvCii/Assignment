@@ -1,9 +1,12 @@
 import Header from "../../components/header";
 import Footer from "../../components/footer";
-import { getAll } from "../../api/product";
+// import { getAll } from "../../api/product";
+import List from "../listpro";
+import { getCategory } from "../../api/category";
 const Products = {
-        async render() {
-            const { data } = await getAll();
+        async render(id) {
+            const dataCate = (await getCategory(id)).data;
+            console.log(dataCate)
             return /* html */ `
         <div class="max-w-full mx-auto">
         <header id="header">
@@ -25,64 +28,22 @@ const Products = {
                     </div>
                      </form>
                     </nav>
+                     ${dataCate.map((item) => /* html */`
                     <ul class="">
                         <li class="ml-5">
-                        <a href="" class="flex space-x-2 mt-10 cursor-pointer  hover:text-white duration-150">
-                            <img class="w-12 mr-2" src="../../../images/fist.png" alt="fist">
-                        <span class="mt-2 text-xl font-semibold">Đấu sĩ</span>
+                        <a href="/#/category/${item.id}" class="flex space-x-2 mt-10 cursor-pointer  hover:text-white duration-150">
+                            <img class="w-12 mr-2" src="${item.img}" alt="fist">
+                        <span class="mt-2 text-xl font-semibold">${item.cate}</span>
                         </a>
                         </li>
-                    <li class="ml-5">
-                    <a href="" class="flex space-x-2 mt-10 cursor-pointer  hover:text-white duration-150">
-                            <img class="w-10 mr-3" src="../../../images/sword.png" alt="sword">
-                        <span class="mt-2 text-xl font-semibold">Sát thủ</span>
-                        </a>
-                        </li>
-                        <li class="ml-5">
-                        <a href="" class="flex space-x-2 mt-10 cursor-pointer  hover:text-white duration-150">
-                            <img class="w-10  mr-3" src="../../../images/shield.png" alt="shield">
-                        <span class="mt-2 text-xl font-semibold">Đỡ đòn</span>
-                        </a>
-                        </li>
-                    <li class="ml-5"> 
-                    <a href="" class="flex space-x-2 mt-10 cursor-pointer hover:text-white duration-150">
-                            <img class="w-10  mr-3" src="../../../images/magic.png" alt="magic">
-                        <span class="mt-2 text-xl font-semibold">Pháp sư</span>
-                        </a>
-                        </li>
-                    <li class="ml-5">
-                    <a href="" class="flex space-x-2 mt-10 cursor-pointer hover:text-white duration-150">
-                            <img class="w-10 mr-3" src="../../../images/support.png" alt="support">
-                        <span class="mt-2 text-xl font-semibold">Trợ thủ</span>
-                        </a>
-                        </li>
+                    
                     </ul>
+                      `).join("")}
                     </div>
                 </div>
 
                 <main class=" min-h-screen w-full">
-                <h1 class="text-2xl text-center uppercase font-semibold">Tất cả sản phẩm</h1>
-                    <div class="mt-5 bg-gray-100 flex flex-wrap  items-center">
-                         ${data.map((product) => /*html */ `
-                            <a href="/products/${product.id}">
-                                <div class="mt-4 mx-3 w-[340px] p-6 bg-white hover:bg-slate-400 rounded-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all transform duration-500">
-                                    <img class=" w-72 h-44 object-cover rounded-t-md" src="${product.img}" alt="heroes" />
-                                    <div class="mt-3">
-                                        <h1 class="text-2xl font-bold text-gray-700">${product.name}</h1>
-                                        <p class="text-sm mt-2 text-gray-700">${product.type}</p>
-                                        <div class="mt-4 mb-2 flex justify-between  pr-2">
-                                            <button class="block text-xl font-semibold text-gray-700 cursor-auto">${product.price} VNĐ</button>
-                                            <button class="transition ease-in-out delay-350 hover:-translate-y-1 hover:scale-110 hover: duration-300 text-lg block font-semibold py-2 px-9 text-green-100 hover:text-white bg-blue-600 hover:bg-blue-800 rounded-lg shadow hover:shadow-md transition duration-300">Add</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            
-
-                             `).join("")}
-                    </div>
-
+                      ${await List.render()}
                 </main>
                 </div>
 
@@ -94,15 +55,15 @@ const Products = {
     </div>
         `;
     },
-     afterRender() {
-        Header.afterRender();
-        const searchBtn = document.querySelector(".search-input");
-        const search = document.querySelector(".search");
-        search.addEventListener("submit",(e)=>{
-            e.preventDefault();
-            document.location.href = `/#/search/${searchBtn.value}`;
-        });
-        
+    afterRender() {
+        // Header.afterRender();
+        // const searchBtn = document.querySelector(".search-input");
+        // const search = document.querySelector(".search");
+        // search.addEventListener("submit", (e) => {
+        //     e.preventDefault();
+        //     document.location.href = `/#/search/${searchBtn.value}`;
+        // });
+
     },
 };
 
