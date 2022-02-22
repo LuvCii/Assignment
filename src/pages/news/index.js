@@ -5,9 +5,6 @@ const News = {
         async render() {
             const { data } = await getAll();
             return /* html */ `
-             <header>
-                ${Header.render() } 
-            </header>
             <main>
             <h1 class="text-center my-6 text-4xl font-bold">Cốt truyện</h1>
                 <div aria-label="group of cards" tabindex="0" class="focus:outline-none py-8 w-full">
@@ -50,9 +47,6 @@ const News = {
                
           
             </main>
-            <footer>
-                ${Footer.render()}
-            </footer>
                     
                 `;
     },

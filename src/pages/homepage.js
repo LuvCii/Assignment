@@ -2,6 +2,7 @@ import Banner from "../components/banner";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { getAll } from "../api/product";
+import News from "./news/index";
 // import { getAll } from "../api/category";
 
 const HomePage = {
@@ -39,6 +40,7 @@ const HomePage = {
                     <a href="/products" class="border-2 bg-blue-600 hover:bg-blue-900 transition-all transform duration-500 text-white rounded-md px-7 py-4 text-lg">Xem thêm</a>
                 </div>
             </div>
+            <div class="my-24">${await News.render()}</div>
         </main>
         <footer>
             ${Footer.render()}

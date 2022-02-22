@@ -4,9 +4,16 @@ import AdminNews from ".";
 import { add } from "../../../api/post";
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
+import $ from 'jquery';
+import validate from 'jquery-validation';
 const AdminNewsAdd = {
     render() {
         return /*html*/ `
+         <style>
+		      label.error{
+			      color: red;
+		      }
+	    </style>
         <div class="min-h-full">
             ${NavAdmin.render()}
             <header class="bg-white shadow">
@@ -23,15 +30,15 @@ const AdminNewsAdd = {
                     <div class="space-y-4">
                       <div>
                         <label for="title" class="text-lx font-serif">Title:</label>
-                        <input type="text" placeholder="title" id="title" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
+                        <input required type="text" placeholder="title" name="title" id="title" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                       </div>
                       <div>
                         <label for="title" class="text-lx font-serif">Description mini:</label>
-                        <input type="text" placeholder="title" id="descMini" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
+                        <input required type="text" placeholder="mô tả ngắn..." id="descMini" name="descMini" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                       </div>
                       <div>
                         <label for="description" class="block mb-2 text-lg font-serif">Description:</label>
-                        <textarea id="description" cols="30" rows="10" placeholder="whrite here.." class="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md"></textarea>
+                        <textarea required name="desc" id="description" cols="30" rows="10" placeholder="whrite here.." class="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md"></textarea>
                       </div>
 
                        <div>
@@ -44,7 +51,7 @@ const AdminNewsAdd = {
                             <div class="flex text-sm text-gray-600">
                               <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                 <span>Upload a file</span>
-                                <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                <input required id="file-upload" name="file-upload" type="file" class="sr-only">
                               </label>
                               <p class="pl-1">or drag and drop</p>
                             </div>
@@ -117,6 +124,53 @@ const AdminNewsAdd = {
             }, 1000);
             reRender(AdminNews, "#app");
         });
+
+
+
+        // Validate form
+        $().ready(function() {
+            $("#form-add-post").validate({
+                onfocusout: false,
+                onkeyup: false,
+                onclick: false,
+                rules: {
+                    "title": {
+                        required: true,
+                        minlength: 10
+                    },
+                    "descMini": {
+                        required: true,
+                        minlength: 15
+                    },
+                    "desc": {
+                        required: true,
+                        minlength: 15
+                    },
+                    "file-upload": {
+                        required: true,
+                    }
+
+                },
+                messages: {
+                    "title": {
+                        required: "Bắt buộc nhập tiêu đề",
+                        maxlength: "Hãy nhập tối đa 10 ký tự"
+                    },
+                    "descMini": {
+                        required: "Bắt buộc nhập mô tả ngắn",
+                        minlength: "Hãy nhập ít nhất 8 ký tự"
+                    },
+                    "desc": {
+                        required: "Bắt buộc nhập mô tả",
+                        minlength: "Hãy nhập ít nhất 30 ký tự"
+                    },
+                    "file-upload": {
+                        required: "Bắt buộc chọn ảnh",
+                    }
+                }
+            });
+        });
+
     },
 }
 export default AdminNewsAdd;

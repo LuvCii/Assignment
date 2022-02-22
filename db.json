@@ -1,110 +1,105 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "Cốt truyện liliana",
-      "descMini": "Lili đó ",
-      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645374005/liliana_mc3gcd.jpg",
-      "desc": "Một trong những thực thể cổ xưa nhất ở Athanor còn tồn tại, Liliana đã được sinh ra khi thế giới vẫn còn trong trạng thái hỗn độn và vạn vật sinh tồn đều nhờ vào bản năng."
-    },
-    {
-      "title": "Cốt truyện Nakroth",
-      "descMini": "Lưỡi Đao Phán Xét (Gươm hành quyết)",
-      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645387975/nakroth_gltcoe.jpg",
-      "desc": "Binh lính phụ trách canh gác liền nhanh chóng dịch chuyển rào cản ngựa, đứng bên đường kính sợ nhìn đoàn quân vừa mới chiến thắng trở về.Những người đứng ở đó, bao gồm cả nông phu, không ai không biết đến truyền thuyết về đội quân huyết sắc kỵ sĩ: Phàm đánh là phải thắng, hễ thắng phải đánh tới cùng.Huyết kỳ đi qua, không chừa một mạng.Thậm chí có người còn so sánh bọn hắn với đội quân ác ma hàng trăm năm trước tấn công lục địa Athanor.",
-      "id": 2
-    }
-  ],
-  "users": [
-    {
-      "email": "abc@gmail.com",
-      "password": "$2a$10$657p9bD7APhYBrzN7MjlC.i11WoORlRosFSdetkadxPLBABD/Dfjm",
-      "username": "Minh Dung",
-      "id": 1
-    },
-    {
-      "email": "thaopt@gmail.com",
-      "password": "$2a$10$atg589JfxV5XqSN7jTsh8.qj59GEP0G7jQPq1sP6kft3VULVlgEyK",
-      "username": "thao",
-      "id": 8
-    },
-    {
-      "email": "dung@gmail.com",
-      "password": "$2a$10$JkI5nG9oacAkY5AlKX0o7OMCSSc9yODEiEyxlKVnssJmn.4U9KBO2",
-      "username": "Minhdung",
-      "id": 10
-    },
-    {
-      "email": "dungtmph16743@fpt.edu.vn",
-      "password": "$2a$10$h/GVKOT5ttNWxZY6kfwcM.6IpTIRPawVrD6/JhBlb2SD4uHExh9Qy",
-      "username": "Pholotino",
-      "id": 11
-    },
-    {
-      "email": "aaa@gmail.com",
-      "password": "$2a$10$uIlYxjlYbTHSK7ZqicHT9.vnBmfrHVJakGday6euB1.4HRGLsA8wa",
-      "username": "aaaa",
-      "id": 12
-    },
-    {
-      "email": "aab@gmail.com",
-      "password": "$2a$10$XNiv384qV.6a2KLR86eZaOyu66ifREo2nJ9yRC721eNQpSyQhbtIe",
-      "username": "aaab",
-      "id": 13
-    },
-    {
-      "email": "aab@gmail",
-      "password": "$2a$10$h8WIk8YiAITPvW2icSTLg.7vkBygV3e/SKQ.4YyNruNREKa0TiNpS",
-      "username": "aaaaaaa",
-      "id": 14
-    }
-  ],
-  "products": [
-    {
-      "name": "Nakroth",
-      "type": "Sát thủ",
-      "price": "18 888",
-      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371018/nakroth_e6xzkw.jpg",
-      "desc": "Khiêu chiến",
-      "id": 20
-    },
-    {
-      "name": "Liliana",
-      "type": "Pháp sư",
-      "price": "18 888",
-      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371230/liliana_i0ufic.jpg",
-      "desc": "Nguyệt mị ly",
-      "id": 21
-    },
-    {
-      "name": "Ryoma",
-      "type": "Đấu sĩ",
-      "price": "25 888",
-      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371323/ryoma_whwtk0.jpg",
-      "desc": "Samurai huyền thoại",
-      "id": 22
-    },
-    {
-      "name": "Violet",
-      "type": "Xạ thủ",
-      "price": "13 888",
-      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371461/violet_prvijf.jpg",
-      "desc": "Nữ hoàng pháo hoa",
-      "id": 23
-    },
-    {
-      "name": "Cresht",
-      "type": "Đỡ đòn",
-      "price": "",
-      "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371573/cresht_aycwts.jpg",
-      "desc": "Cá cắn cáp",
-      "id": 24
-    }
-  ],
-  "category": [
-    {
-      "id": 1,
-      "type": "Sát thủ"
-    }
-  ]
+    "posts": [{
+            "id": 1,
+            "title": "Cốt truyện liliana",
+            "descMini": "Pháp sư",
+            "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645374005/liliana_mc3gcd.jpg",
+            "desc": "                                 quá là ngầu                                                                                                                                                                                           "
+        },
+        {
+            "title": "Cốt truyện Nakroth",
+            "descMini": "Lưỡi Đao Phán Xét (Gươm hành quyết)",
+            "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645387975/nakroth_gltcoe.jpg",
+            "desc": "Binh lính phụ trách canh gác liền nhanh chóng dịch chuyển rào cản ngựa, đứng bên đường kính sợ nhìn đoàn quân vừa mới chiến thắng trở về.Những người đứng ở đó, bao gồm cả nông phu, không ai không biết đến truyền thuyết về đội quân huyết sắc kỵ sĩ: Phàm đánh là phải thắng, hễ thắng phải đánh tới cùng.Huyết kỳ đi qua, không chừa một mạng.Thậm chí có người còn so sánh bọn hắn với đội quân ác ma hàng trăm năm trước tấn công lục địa Athanor.",
+            "id": 2
+        }
+    ],
+    "users": [{
+            "email": "abc@gmail.com",
+            "password": "$2a$10$657p9bD7APhYBrzN7MjlC.i11WoORlRosFSdetkadxPLBABD/Dfjm",
+            "username": "Minh Dung",
+            "id": 1
+        },
+        {
+            "email": "thaopt@gmail.com",
+            "password": "$2a$10$atg589JfxV5XqSN7jTsh8.qj59GEP0G7jQPq1sP6kft3VULVlgEyK",
+            "username": "thao",
+            "id": 8
+        },
+        {
+            "email": "dung@gmail.com",
+            "password": "$2a$10$JkI5nG9oacAkY5AlKX0o7OMCSSc9yODEiEyxlKVnssJmn.4U9KBO2",
+            "username": "Minhdung",
+            "id": 10
+        },
+        {
+            "email": "dungtmph16743@fpt.edu.vn",
+            "password": "$2a$10$h/GVKOT5ttNWxZY6kfwcM.6IpTIRPawVrD6/JhBlb2SD4uHExh9Qy",
+            "username": "Pholotino",
+            "id": 11
+        },
+        {
+            "email": "aaa@gmail.com",
+            "password": "$2a$10$uIlYxjlYbTHSK7ZqicHT9.vnBmfrHVJakGday6euB1.4HRGLsA8wa",
+            "username": "aaaa",
+            "id": 12
+        },
+        {
+            "email": "aab@gmail.com",
+            "password": "$2a$10$XNiv384qV.6a2KLR86eZaOyu66ifREo2nJ9yRC721eNQpSyQhbtIe",
+            "username": "aaab",
+            "id": 13
+        },
+        {
+            "email": "aab@gmail",
+            "password": "$2a$10$h8WIk8YiAITPvW2icSTLg.7vkBygV3e/SKQ.4YyNruNREKa0TiNpS",
+            "username": "aaaaaaa",
+            "id": 14
+        }
+    ],
+    "products": [{
+            "name": "Nakroth",
+            "type": "Sát thủ",
+            "price": "18 888",
+            "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371018/nakroth_e6xzkw.jpg",
+            "desc": "Khiêu chiến",
+            "id": 20
+        },
+        {
+            "name": "Liliana",
+            "type": "Pháp sư",
+            "price": "18 888",
+            "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371230/liliana_i0ufic.jpg",
+            "desc": "Nguyệt mị ly",
+            "id": 21
+        },
+        {
+            "name": "Ryoma",
+            "type": "Đấu sĩ",
+            "price": "25 888",
+            "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371323/ryoma_whwtk0.jpg",
+            "desc": "Samurai huyền thoại",
+            "id": 22
+        },
+        {
+            "name": "Violet",
+            "type": "Xạ thủ",
+            "price": "13 888",
+            "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371461/violet_prvijf.jpg",
+            "desc": "Nữ hoàng pháo hoa",
+            "id": 23
+        },
+        {
+            "name": "Cresht",
+            "type": "Đỡ đòn",
+            "price": "",
+            "img": "http://res.cloudinary.com/di7fl16mp/image/upload/v1645371573/cresht_aycwts.jpg",
+            "desc": "Cá cắn cáp",
+            "id": 24
+        }
+    ],
+    "category": [{
+        "id": 1,
+        "type": "Sát thủ"
+    }]
 }

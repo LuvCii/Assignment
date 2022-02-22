@@ -3,6 +3,8 @@ import AdminNews from ".";
 import axios from "axios";
 import { reRender } from "../../../utils";
 import {get, update } from "../../../api/post";
+import $ from 'jquery';
+import validate from 'jquery-validation';
 import toastr from "toastr";
 import "toastr/build/toastr.min.css";
 
@@ -10,6 +12,11 @@ const AdminNewsEdit = {
     async render(id) {
         const { data } = await get(id);
         return /*html*/ `
+         <style>
+		      label.error{
+			      color: red;
+		      }
+	    </style>
         <div class="min-h-full">
             ${NavAdmin.render()}
             <header class="bg-white shadow">
@@ -122,6 +129,44 @@ const AdminNewsEdit = {
                 }
             }, 1000);
             reRender(AdminNews, "#app");
+        });
+
+        // Validate form SignIn
+        $().ready(function() {
+            $("#form-edit-post").validate({
+                onfocusout: false,
+                onkeyup: false,
+                onclick: false,
+                rules: {
+                    "title": {
+                        required: true,
+                        minlength: 10
+                    },
+                    "descMini": {
+                        required: true,
+                        minlength: 15
+                    },
+                    "desc": {
+                        required: true,
+                        minlength: 15
+                    }
+
+                },
+                messages: {
+                    "title": {
+                        required: "Bắt buộc nhập email",
+                        maxlength: "Hãy nhập tối đa 10 ký tự"
+                    },
+                    "descMini": {
+                        required: "Bắt buộc nhập password",
+                        minlength: "Hãy nhập ít nhất 8 ký tự"
+                    },
+                    "desc": {
+                        required: "Bắt buộc nhập password",
+                        minlength: "Hãy nhập ít nhất 8 ký tự"
+                    }
+                }
+            });
         });
     },
 }
