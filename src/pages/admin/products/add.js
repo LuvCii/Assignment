@@ -46,6 +46,10 @@ const AdminProductsAdd = {
                         <label for="description" class="block mb-2 text-lg font-serif">Description:</label>
                         <textarea id="description" name="desc" cols="30" rows="10" placeholder="Mô tả.." class="w-full font-serif  p-4 text-gray-600 bg-indigo-50 outline-none rounded-md"></textarea>
                       </div>
+                      <div>
+                        <label for="title" class="text-lx font-serif">ID cate</label>
+                        <input id="cate" type="number" placeholder="Type" name="cate" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
+                      </div>
 
                        <div>
                        <label for="description" class="block mb-2 text-lg font-serif">Image</label>
@@ -119,6 +123,7 @@ const AdminProductsAdd = {
                 price: document.querySelector("#price").value,
                 img: data.url,
                 desc: document.querySelector("#description").value,
+                categoryId: document.querySelector("#cate").value,
             });
             setTimeout(() => {
                 if (add) {
@@ -156,6 +161,9 @@ const AdminProductsAdd = {
                     "desc": {
                         required: true,
                         minlength: 5
+                    },
+                    "cate": {
+                        required: true,
                     }
 
                 },
@@ -178,6 +186,9 @@ const AdminProductsAdd = {
                     "desc": {
                         required: "Bắt buộc nhập mô tả",
                         minlength: "Hãy nhập ít nhất 5 ký tự"
+                    },
+                    "cate": {
+                        required: "Bắt buộc nhập vào id category",
                     }
                 }
             });

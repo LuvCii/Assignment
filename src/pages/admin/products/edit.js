@@ -1,6 +1,8 @@
 import NavAdmin from "../../../components/NavAdmin";
 import AdminProducts from ".";
 import axios from "axios";
+import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 import { reRender } from "../../../utils";
 import {get, update } from "../../../api/product";
 
@@ -39,6 +41,10 @@ const AdminProductsEdit = {
                         <textarea id="desc" name="about" rows="10"
                                                 class="shadow-sm bg-indigo-50 outline-none text-xl font-serif mt-1 block w-full sm:text-sm border border-gray-300 rounded-md p-3">
                                             ${data.desc}</textarea>
+                      </div>
+                       <div>
+                        <label for="title" class="text-lx font-serif">ID cate</label>
+                        <input id="cate" value="${data.categoryId}" type="number" placeholder="Type" name="cate" class="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md" />
                       </div>
 
                        <div>
@@ -116,6 +122,7 @@ const AdminProductsEdit = {
                 //  Nếu imgLink có giá trị thì sẽ lấy giá trị của imgLink ngược lại thì rỗng
                 img: imgLink || imgPreview.src,
                 desc: document.querySelector("#desc").value,
+                categoryId: document.querySelector("#cate").value,
             });
             setTimeout(() => {
                 if (update) {
